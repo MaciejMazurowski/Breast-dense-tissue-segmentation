@@ -7,7 +7,7 @@ This repository includes the code of training breast-segmentation model and dens
 ## U-Net architecture
 The figure below shows a U-Net architecture implemented in this repository.
 
-![unet](unet.png)
+![unet](UNet.png)
 
 ## Data
 
