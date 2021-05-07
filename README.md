@@ -5,6 +5,9 @@ The breast density segmentation contains two parts: out breast segmentaiton and 
 This repository includes the code of training breast-segmentation model and dense-tissue-segmentation model seperately.
 
 ## U-Net architecture
+The figure below shows a U-Net architecture implemented in this repository.
+
+![unet](unet.png)
 
 ## Data
 
