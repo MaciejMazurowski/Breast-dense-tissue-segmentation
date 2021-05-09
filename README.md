@@ -21,13 +21,24 @@ Refer to 'format_conversion_and_normalization.ipynb' for more details.
 The main requirement for dataset preparation is to have image names the same as corresponding masks names (e.g. both image and the corresponding mask named <case_id>_<slice_number>.png).
 
 ### Prediction
-After training your model and saving it to MODEL.pth (or download our pretrained model), you can easily test the output masks on your images.
+After training your model and saving it to MODEL.pth (or download our pretrained model), you can easily test the output masks on your images or calculate the breast density on your 3D volume of slices.
 
+#### Mask prediction for one slice
 To predict images in a folder and save it:
 
-`python predict.py -i image_folder_path/ -o save_path/ -m model_path/checkpoint.pth`
+`python predict.py -i image_folder_path/ -o save_path/ -m MODEL.pth`
+
+#### Breast density calculation for 3D volume
+To predict the breast density for one patient and print it:
+
+`python calculate_density.py -i 3D_volume_path/  -m_d DENSE_TISSUE_MODEL.pth -m_b BREAST_MODEL.pth`
+
+The 3D volume folder should contains all slices for that patient.
+`calculate_density.py` is under floder `dense_tissue_train`.
+
 
 ### Training
+The training script train.py has variables defined at the top that you need to set:
 
 #### Tensorboard
 You can visualize in real time the train and test losses, the weights and gradients, along with the model predictions with tensorboard:
