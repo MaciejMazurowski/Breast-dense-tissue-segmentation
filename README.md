@@ -47,10 +47,10 @@ The training script train.py has variables defined at the top that you need to s
 - `dir_checkpoint` - folder saving the model
 - `dir_test_pred` - folder saving the test predictions after each epoch
 
-Then, run the training using
-```
-python train.py -e num_of_epochs -b batchsize -l learning_rate
-```
+Then, run the training using:
+
+`python train.py -e num_of_epochs -b batchsize -l learning_rate`
+
 By default, num_of_epochs is 200, batchsize is 2, learning_rate is 5e-4.
 
 #### Tensorboard
