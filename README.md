@@ -7,10 +7,18 @@ This repository includes the trained weights which can be used for inference or 
 ## Usage
 **Note : Use Python 3.6 or newer**
 ### Pretrained model
+The pretrained weights for breast segmentation are stored in 'breast_train/checkpoint_breast/CP_breast.pth'.
+The pretrained weights for dense tissue segmentation are stored in 'dense_tissue_train/checkpoint_dense_tissue/CP_dense_tissue.pth'.
+
+If you want to use our trained weights for inference, you should use the normalization method which is shown in the following Preprocessing part. 
+
+### Preprocessing
 
 ### Prediction
 
 ### Training
+
+#### Tensorboard
 
 ## Data
 ### Duke-Breast-Cancer-MRI
