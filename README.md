@@ -7,16 +7,16 @@ This repository includes the trained weights which can be used for prediction or
 ## Usage
 **Note : Use Python 3.6 or newer**
 ### Pretrained model
-The pretrained weights for breast segmentation are stored in 'breast_train/checkpoint_breast/CP_breast.pth'.
-The pretrained weights for dense tissue segmentation are stored in 'dense_tissue_train/checkpoint_dense_tissue/CP_dense_tissue.pth'.
+The pretrained weights for breast segmentation are stored in `breast_train/checkpoint_breast/CP_breast.pth`.
+The pretrained weights for dense tissue segmentation are stored in `dense_tissue_train/checkpoint_dense_tissue/CP_dense_tissue.pth`.
 
 If you want to use our trained weights for prediction, you should use the same normalization method for your dataset as we do which is shown in the following Preprocessing part. 
 
 ### Preprocessing
-You need to have a folder with images preprocessed using provided python code 'format_conversion_and_normalization.ipynb'. 
+You need to have a folder with images preprocessed using provided python code `format_conversion_and_normalization.ipynb`. 
 If your MRI files and mask files are DICOM format, use step 1 to convert them to PNG format.
 After having the png format dataset, use step 2 to normalize the MRIs. 
-Refer to 'format_conversion_and_normalization.ipynb' for more details. 
+Refer to `format_conversion_and_normalization.ipynb` for more details. 
 
 The main requirement for dataset preparation is to have image names the same as corresponding masks names (e.g. both image and the corresponding mask named <case_id>_<slice_number>.png).
 
@@ -39,6 +39,19 @@ The 3D volume folder should contains all slices for that patient.
 
 ### Training
 The training script train.py has variables defined at the top that you need to set:
+
+- `dir_img_train` - folder containing training images
+- `dir_img_test` - folder containing test images
+- `dir_mask_train` - folder containing training masks
+- `dir_mask_test` - folder containing test masks
+- `dir_checkpoint` - folder saving the model
+- `dir_test_pred` - folder saving the test predictions after each epoch
+
+Then, run the training using
+```
+python train.py -e num_of_epochs -b batchsize -l learning_rate
+```
+By default, num_of_epochs is 200, batchsize is 2, learning_rate is 5e-4.
 
 #### Tensorboard
 You can visualize in real time the train and test losses, the weights and gradients, along with the model predictions with tensorboard:
