@@ -2,7 +2,7 @@
 
 This is the sorce code (PyTorch + Python) which employs UNet for breast density segmentation.
 The breast density segmentation contains two parts: out breast segmentaiton and dense tissue segmentation.
-This repository includes the trained weights which can be used for inference or fine-tuning on a different dataset, and training code for breast segmentation and dense tissue segmentation seperately.
+This repository includes the trained weights which can be used for prediction or fine-tuning on a different dataset, and training code for breast segmentation and dense tissue segmentation seperately.
 
 ## Usage
 **Note : Use Python 3.6 or newer**
@@ -10,15 +10,23 @@ This repository includes the trained weights which can be used for inference or 
 The pretrained weights for breast segmentation are stored in 'breast_train/checkpoint_breast/CP_breast.pth'.
 The pretrained weights for dense tissue segmentation are stored in 'dense_tissue_train/checkpoint_dense_tissue/CP_dense_tissue.pth'.
 
-If you want to use our trained weights for inference, you should use the normalization method which is shown in the following Preprocessing part. 
+If you want to use our trained weights for prediction, you should use the same normalization method for your dataset as we do which is shown in the following Preprocessing part. 
 
 ### Preprocessing
+You need to have a folder with images preprocessed using provided python code 'format_conversion_and_normalization.ipynb'. 
+If your MRI files and mask files are DICOM format, use step 1 to convert them to PNG format.
+After having the png format dataset, use step 2 to normalize the MRIs. The contrast normalization method we use is to 
+Refer to 'format_conversion_and_normalization.ipynb' for more details. 
+The main requirement for dataset preparation is to have image names the same as corresponding masks names (e.g. both image and the corresponding mask named <case_id>_<slice_number>.png).
 
 ### Prediction
 
 ### Training
 
 #### Tensorboard
+You can visualize in real time the train and test losses, the weights and gradients, along with the model predictions with tensorboard:
+
+`tensorboard --logdir=runs`
 
 ## Data
 ### Duke-Breast-Cancer-MRI
