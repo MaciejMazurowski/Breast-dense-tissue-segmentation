@@ -21,6 +21,11 @@ Refer to 'format_conversion_and_normalization.ipynb' for more details.
 The main requirement for dataset preparation is to have image names the same as corresponding masks names (e.g. both image and the corresponding mask named <case_id>_<slice_number>.png).
 
 ### Prediction
+After training your model and saving it to MODEL.pth (or download our pretrained model), you can easily test the output masks on your images.
+
+To predict images in a folder and save it:
+
+`python predict.py -i image_folder_path/ -o save_path/ -m model_path/checkpoint.pth`
 
 ### Training
 
