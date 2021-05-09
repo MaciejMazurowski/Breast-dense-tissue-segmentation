@@ -15,8 +15,9 @@ If you want to use our trained weights for prediction, you should use the same n
 ### Preprocessing
 You need to have a folder with images preprocessed using provided python code 'format_conversion_and_normalization.ipynb'. 
 If your MRI files and mask files are DICOM format, use step 1 to convert them to PNG format.
-After having the png format dataset, use step 2 to normalize the MRIs. The contrast normalization method we use is to 
+After having the png format dataset, use step 2 to normalize the MRIs. 
 Refer to 'format_conversion_and_normalization.ipynb' for more details. 
+
 The main requirement for dataset preparation is to have image names the same as corresponding masks names (e.g. both image and the corresponding mask named <case_id>_<slice_number>.png).
 
 ### Prediction
