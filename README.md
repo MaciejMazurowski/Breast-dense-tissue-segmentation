@@ -70,10 +70,10 @@ This dataset shares MRI imaging and other data for 922 patients with invasive br
 The segmentation masks (including breast masks and dense tissue masks) are available here:
 
 ## Results
-![dense_1](Breast_MRI_187_pre_081.png)
-![dense_2](Breast_MRI_231_pre_076.png)
-![dense_3](Breast_MRI_503_pre_105.png)
-![dense_4](Breast_MRI_629_pre_100.png)
+![dense_1](result_dense_1.png)
+![dense_2](result_dense_2.png)
+![dense_3](result_dense_3.png)
+![dense_4](result_dense_4.png)
 
 ## U-Net architecture
 
