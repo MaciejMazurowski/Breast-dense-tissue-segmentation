@@ -47,6 +47,8 @@ The training script train.py has variables defined at the top that you need to s
 - `dir_checkpoint` - folder saving the model
 - `dir_test_pred` - folder saving the test predictions after each epoch
 
+**Note : images and the corresponding masks should have the same name**
+
 Then, run the training using:
 
 `python train.py -e num_of_epochs -b batchsize -l learning_rate`
