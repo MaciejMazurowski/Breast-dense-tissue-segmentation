@@ -34,7 +34,7 @@ To predict the breast density for one patient and print it:
 `python calculate_density.py -i 3D_volume_path/  -m_d DENSE_TISSUE_MODEL.pth -m_b BREAST_MODEL.pth`
 
 The 3D volume folder should contains all slices for that patient.
-`calculate_density.py` is under floder `dense_tissue_train`.
+`calculate_density.py` is under folder `dense_tissue_train`.
 
 
 ### Training
