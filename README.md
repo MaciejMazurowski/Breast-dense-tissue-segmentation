@@ -70,6 +70,7 @@ This dataset shares MRI imaging and other data for 922 patients with invasive br
 The segmentation masks (including breast masks and dense tissue masks) are available here:
 
 ## Results
+The last colume 'pred2' amis at better illustrating our results. White pixel represents true positive, green pixel represents, red pixel represents
 ![dense_1](result_dense_1.png)
 ![dense_2](result_dense_2.png)
 ![dense_3](result_dense_3.png)
