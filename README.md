@@ -53,7 +53,7 @@ Then, run the training using:
 
 `python train.py -e num_of_epochs -b batchsize -l learning_rate`
 
-By default, num_of_epochs is 200, batchsize is 2, learning_rate is 5e-4.
+By default, num_of_epochs is 250, batchsize is 2, learning_rate is 5e-4.
 
 #### Tensorboard
 You can visualize in real time the train and test losses, the weights and gradients, along with the model predictions with tensorboard:
