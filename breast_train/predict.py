@@ -53,9 +53,6 @@ def get_args():
     parser = argparse.ArgumentParser(description='Predict masks from input images',
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
-    # parser.add_argument('--model', '-m', default='checkpoint_0406//CP_epoch200.pth',
-    #                     metavar='FILE',
-    #                     help="Specify the file in which the model is stored")
     parser.add_argument('--model', '-m', metavar='FILE',
                         help="Specify the file in which the model is stored")
     
@@ -105,7 +102,6 @@ def mask_to_image(mask):
 if __name__ == "__main__":
     args = get_args()
     in_files = args.input
-    mask_files = args.mask
     out_files = get_output_filenames(args)
     if not os.path.exists(out_files[0]):
         os.makedirs(out_files[0])

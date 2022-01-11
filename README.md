@@ -4,8 +4,15 @@ This is the sorce code (PyTorch + Python) which employs UNet for breast density 
 The breast density segmentation contains two parts: out breast segmentaiton and dense tissue segmentation.
 This repository includes the trained weights which can be used for prediction or fine-tuning on a different dataset, and training code for breast segmentation and dense tissue segmentation respectively.
 
+## Prerequisites
+
+- Python 3 with dependencies listed in the `requirements.txt` file
+```
+sudo pip install -r requirements.txt
+```
+
 ## Usage
-**Note : Use Python 3.6 or newer**
+
 ### Pretrained model
 The pretrained weights for breast segmentation are stored in `breast_train/checkpoint_breast/CP_breast.pth`.
 The pretrained weights for dense tissue segmentation are stored in `dense_tissue_train/checkpoint_dense_tissue/CP_dense_tissue.pth`.
